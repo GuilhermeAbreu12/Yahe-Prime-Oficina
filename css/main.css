@@ -1,0 +1,123 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&family=Teko:wght@300..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --font1: 'Quicksand';
+    --font2: 'Montserrat';
+    --font3: 'Open Sans';
+    --font4: 'Bebas Neue';
+    --font5: 'Fira sans';
+    --font6: 'Teko';
+    --font7: 'Anton';
+}
+main {
+    min-height: 89vh;
+}
+nav {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: black;
+}
+#title {
+    margin: 0;
+    font-size: 2rem;
+    font-family: var(--font6);
+}
+nav {
+    padding: 0 10px;
+    margin: 0;
+    justify-content: space-between;
+}
+#nav-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+}
+.nav-item {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration-style: none;
+    text-underline-offset: 0px;
+    text-decoration: none;
+}
+.nav-item:hover {
+    color: red;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 2px;
+}
+.nav-item.active {
+    color: red;
+}
+footer{
+    padding: 10px 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+footer .container{
+    justify-content: center;
+}
+footer .container .row {
+    justify-content: center;
+}
+.footer-icons__container {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-icons__div {
+    height: 35px;
+    width: 35px;
+    border: 2px solid red;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+.footer-icons__div:hover {
+    border-color: darkred;
+    background: radial-gradient(red, darkred);
+}
+.footer-icons__links {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer svg {
+    width: 100%;
+    padding: 3px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    fill: white;
+    stroke: white;
+    stroke-width: 2;
+}
+footer svg:hover {
+    border-radius: 50%;
+}
