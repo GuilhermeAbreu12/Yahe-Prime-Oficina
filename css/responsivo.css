@@ -1,0 +1,15 @@
+@media (max-width: 576px){
+    nav {
+        height: 50px;
+    }
+    #title {
+        transition: 1s;
+        margin: 0 0 0 70%;
+    }
+    .nav-item {
+        display: none;
+    }
+    #menu-mobile {
+        display: flex;
+    }
+}

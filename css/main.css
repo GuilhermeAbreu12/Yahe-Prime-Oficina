@@ -21,26 +21,29 @@ main {
 nav {
     height: 10vh;
     width: 100%;
-    display: flex;
+    padding: 0 20px;
+    margin: 0;
     align-items: center;
+    display: flex;
+    justify-content: space-between;
     color: white;
     background-color: black;
 }
+
 #title {
     margin: 0;
-    font-size: 2rem;
-    font-family: var(--font6);
+    height: 50%;
 }
-nav {
-    padding: 0 10px;
-    margin: 0;
-    justify-content: space-between;
+#title:hover{
+    transition: .7s;
+    filter: drop-shadow(0 0 2px red);
 }
 #nav-list {
     display: flex;
     list-style: none;
     align-items: center;
     margin: 0;
+    padding: 0;
 }
 .nav-item {
     padding: 5px;
@@ -93,10 +96,6 @@ footer .container .row {
     display: flex;
     justify-content: center;
 }
-.footer-icons__div:hover {
-    border-color: darkred;
-    background: radial-gradient(red, darkred);
-}
 .footer-icons__links {
     padding: 0;
     margin: 0;
@@ -120,4 +119,24 @@ footer svg {
 }
 footer svg:hover {
     border-radius: 50%;
+}
+#icon-facebook:hover, #icon-facebook:focus {
+    border-color: darkblue;
+    background: radial-gradient(blue, darkblue);
+    transition: .5s;
+}
+#icon-whatsapp:hover, #icon-whatsapp:focus {
+    border-color: darkgreen;
+    background: radial-gradient(green, darkgreen);
+    transition: .5s;
+}
+#icon-instagram:hover, #icon-instagram:focus {
+    border-color: darkorange;
+    background: linear-gradient(to bottom, red, darkorange);
+    transition: .5s;
+}
+#icon-linkedin:hover, #icon-linkedin:focus {
+    border-color: rgb(7, 131, 172);
+    background: radial-gradient(lightblue, rgb(7, 131, 172));
+    transition: .5s;
 }
