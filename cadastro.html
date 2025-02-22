@@ -5,179 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yahe Prime - Oficina</title>
     <link rel="shortcut icon" href="imgs/logo.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/responsivo.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <main id="section-login">    
-        <section class="container-fluid">            
+    <main>
+        <section class="container-fluid"> 
             <form>
-                <h1>Login</h1>
+                <h1>Cadastro</h1>
                 <div class="input-box">
-                    <input placeholder="Placa do carro" type="text" id="placa">
+                    <input placeholder="Placa" type="text" id="placa" maxlength="7" required>
                 </div>
                 <div class="input-box">
-                    <input placeholder="Senha" type="password" id="senha">
+                    <input placeholder="Modelo" type="text" required>
+                </div>
+                <div class="input-box">
+                    <input placeholder="Cor" type="text" required>
+                </div>
+                <div class="input-box">
+                    <input placeholder="Ano" type="number" required>
+                </div>
+                <div class="input-box">
+                    <input placeholder="Senha" type="password" required>
                 </div>
                 
-                <div class="remember-forgot">
-                    <label>
-                        <input type="checkbox"> Lembrar a senha
-                    </label>
-                </div>
-                <div id="login-buttons">
-                    <a href="index.html?logado" class="btn" id="no-login">Não logar</a>
-                    <button class="btn" id="login">Logar</button>
-                </div>
-                <p id="sucess-message"></p>
-                
-                <div class="register-link">
-                    <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
-                </div>
+                <button type="submit" class="cadastro">Cadastre-se</button>
             </form>
         </section>    
     </main>
-    <section id="section-main">
-        <div>
-            <nav>
-                <img src="imgs/logotipo.png" id="title" alt="YahePrime - Oficina 24 horas">
-                <p id="subtitle">A melhor oficina que você encontrará</p>
-                <ul id="nav-list">
-                    <a href="index.html" class="nav-item" id="nav-item-inicio">Início</a>
-                    <a href="contato.html" class="nav-item" id="nav-item-contato">Contato</a>
-                    <a href="quem-somos.html" class="nav-item" id="nav-item-quem-somos">Quem somos</a>
-                    <a href="agendamento.html" class="nav-item" id="nav-item-agendamento">Agendamento</a>
-                    <!--
-                    <a href="administrador.html" class="nav-item" id="nav-item-perfil">
-                    </a>-->
-                </ul>
-            </nav>
-            <div id="menu-mobile">
-                <div id="menu-mobile__list">
-                    <div class="menu-mobile__list__item">
-                        <a href="index.html" id="menu-mobile__item-inicio">Início</a>
-                    </div>
-                    <div class="menu-mobile__list__item">
-                        <a href="contato.html" id="menu-mobile__item-contato">Contato</a>
-                    </div>
-                    <div class="menu-mobile__list__item">
-                        <a href="quem-somos.html" id="menu-mobile__item-quem-somos">Quem somos</a>
-                    </div>
-                    <div class="menu-mobile__list__item">
-                        <a href="agendamento.html" id="menu-mobile__item-agendamento">Agendamento</a>
-                    </div>
-                </div>
-                <div id="menu-mobile__icon">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="menu-mobile__icon__svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path  fill-rule="evenodd" clip-rule="evenodd" d="M12.7848 0.449982C13.8239 0.449982 14.7167 1.16546 14.9122 2.15495L14.9991 2.59495C15.3408 4.32442 17.1859 5.35722 18.9016 4.7794L19.3383 4.63233C20.3199 4.30175 21.4054 4.69358 21.9249 5.56605L22.7097 6.88386C23.2293 7.75636 23.0365 8.86366 22.2504 9.52253L21.9008 9.81555C20.5267 10.9672 20.5267 13.0328 21.9008 14.1844L22.2504 14.4774C23.0365 15.1363 23.2293 16.2436 22.7097 17.1161L21.925 18.4339C21.4054 19.3064 20.3199 19.6982 19.3382 19.3676L18.9017 19.2205C17.1859 18.6426 15.3408 19.6754 14.9991 21.405L14.9122 21.845C14.7167 22.8345 13.8239 23.55 12.7848 23.55H11.2152C10.1761 23.55 9.28331 22.8345 9.08781 21.8451L9.00082 21.4048C8.65909 19.6754 6.81395 18.6426 5.09822 19.2205L4.66179 19.3675C3.68016 19.6982 2.59465 19.3063 2.07505 18.4338L1.2903 17.1161C0.770719 16.2436 0.963446 15.1363 1.74956 14.4774L2.09922 14.1844C3.47324 13.0327 3.47324 10.9672 2.09922 9.8156L1.74956 9.52254C0.963446 8.86366 0.77072 7.75638 1.2903 6.8839L2.07508 5.56608C2.59466 4.69359 3.68014 4.30176 4.66176 4.63236L5.09831 4.77939C6.81401 5.35722 8.65909 4.32449 9.00082 2.59506L9.0878 2.15487C9.28331 1.16542 10.176 0.449982 11.2152 0.449982H12.7848ZM12 15.3C13.8225 15.3 15.3 13.8225 15.3 12C15.3 10.1774 13.8225 8.69998 12 8.69998C10.1774 8.69998 8.69997 10.1774 8.69997 12C8.69997 13.8225 10.1774 15.3 12 15.3Z" id="logo"></path> </g></svg>
-                </div>
-            </div>
-            <section id="banner">
-            <div class="blackFilter"></div>    
-            </section>
-            <section id="ourServices">
-                <h2>Nossos serviços</h2>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-image" id="card-mecanica_geral"></div>
-                                    <div class="card-body__content">
-                                        <p class="card-body__text">Do motor ao câmbio, realizamos diagnósticos e reparos completos para garantir o melhor desempenho do seu veículo.</p>
-                                        <a href="agendamento.html" class="card-button">Marcar</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-image" id="card-funilaria"></div>
-                                    <div class="card-body__content">
-                                        <p class="card-body__text">Riscos, amassados ou pintura desgastada? Restauramos a aparência do seu carro com acabamento impecável.</p>
-                                        <a href="agendamento.html" class="card-button link-agendamento">Marcar</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-image" id="card-arcondicionado"></div>
-                                    <div class="card-body__content">
-                                        <p class="card-body__text">Ar fraco ou com mau cheiro? Fazemos higienização, recarga de gás e manutenção para seu conforto.</p>
-                                        <a href="agendamento.html" class="card-button link-agendamento">Marcar</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-image" id="card-pneu"></div>
-                                    <div class="card-body__content">
-                                        <p class="card-body__text">Troca, alinhamento, balanceamento e reparo de pneus para garantir segurança e estabilidade na estrada.</p>
-                                        <a href="agendamento.html" class="card-button link-agendamento">Marcar</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-image" id="card-manutencao-preventiva"></div>
-                                    <div class="card-body__content">
-                                        <p class="card-body__text">Evite surpresas! Revisão completa, troca de óleo, filtros, freios e suspensão para manter seu carro sempre em dia.</p>
-                                        <a href="agendamento.html" class="card-button link-agendamento">Marcar</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-image" id="card-servicos-eletricos"></div>
-                                    <div class="card-body__content">
-                                        <p class="card-body__text">Diagnóstico e reparo de bateria, alternador, iluminação e sistema elétrico para manter seu carro seguro e funcional.</p>
-                                        <a href="agendamento.html" class="card-button link-agendamento">Marcar</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-image" id="card-vidro"></div>
-                                    <div class="card-body__content">
-                                        <p class="card-body__text">Vidros emperrados ou travas falhando? Fazemos reparo e substituição de motores e mecanismos elétricos.</p>
-                                        <a href="agendamento.html" class="card-button link-agendamento">Marcar</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-image" id="card-sensores"></div>
-                                    <div class="card-body__content">
-                                        <p class="card-body__text">Som, alarmes, sensores de ré e muito mais! Instalamos acessórios para deixar seu carro mais    completo.</p>
-                                        <a href="agendamento.html" class="card-button link-agendamento">Marcar</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </section>
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-1 footer-icons__container">
+                <div class="col-1 footer-icons__container" style="margin: 0; padding: 0;">
                     <div class="footer-icons__div" id="icon-facebook">
                         <a href="https://www.facebook.com/devisate" target="_blank" class="footer-icons__links">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50">
@@ -186,7 +48,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-1 footer-icons__container">
+                <div class="col-1 footer-icons__container" style="margin: 0; padding: 0;">
                     <div class="footer-icons__div" id="icon-whatsapp">
                         <a href="https://w.app/yaheprime" target="_blank" class="footer-icons__links">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50">
@@ -195,7 +57,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-1 footer-icons__container">
+                <div class="col-1 footer-icons__container" style="margin: 0; padding: 0;">
                     <div class="footer-icons__div" id="icon-instagram">
                         <a href="https://www.instagram.com/etecdevisate/" target="_blank" class="footer-icons__links">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50">
@@ -204,7 +66,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-1 footer-icons__container">
+                <div class="col-1 footer-icons__container" style="margin: 0; padding: 0;">
                     <div class="footer-icons__div" id="icon-linkedin">
                         <a href="https://www.linkedin.com/in/hidalgojr/" target="_blank" class="footer-icons__links">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50">
@@ -217,28 +79,8 @@
         </div>
         <p>YAHE Prime &copy; 2025</p>
     </footer>
-    <script>
-        const SectionMain = document.getElementById('section-main')
-        const SectionLogin = document.getElementById('section-login')
-        const linksAgendamento = document.querySelectorAll('.link-agendamento')
 
-        url = window.location.href
-        if (url.includes('?logado')){
-            SectionLogin.style.display = 'none'
-            SectionMain.style.display = 'flex'
-        } else {
-            SectionLogin.style.display = 'flex'
-            SectionMain.style.display = 'none'
-        }
-        
-        linksAgendamento.forEach(element => {
-            element.href = 'agendamento.html?logado'
-        });
-    </script>
-    <script type="module" src="js/login.js" defer></script>
-    <script src="js/save.js" defer></script>
     <script src="js/menu.js" defer></script>
-    <script src="js/nav.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>

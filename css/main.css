@@ -14,30 +14,61 @@
     --font5: 'Fira sans';
     --font6: 'Teko';
     --font7: 'Anton';
+    --red1: red;
+    --red2: darkred;
+    --gray: rgb(41, 41, 41);
+}
+body {
+    background-color: black;
 }
 main {
-    min-height: 89vh;
+    min-height: 90vh;
+    background-color: var(--gray);
 }
 nav {
     height: 10vh;
     width: 100%;
     padding: 0 20px;
     margin: 0;
-    align-items: center;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     color: white;
     background-color: black;
 }
 
 #title {
+    box-sizing: content-box;
     margin: 0;
+    padding: 10px 0;
     height: 50%;
+}
+#title::selection{
+    background-color: transparent;
 }
 #title:hover{
     transition: .7s;
-    filter: drop-shadow(0 0 2px red);
+    filter: drop-shadow(0 0 2px var(--red1));
 }
+#subtitle {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    top: 0;
+    position: absolute;
+    left: -35%;
+    z-index: -1;
+    opacity: 0%;
+}
+#subtitle.active {
+    transition: 1s;
+    position: relative;
+    opacity: 100%;
+    transform: translateX(255px);
+    z-index: 0;
+}
+/* Nav */
 #nav-list {
     display: flex;
     list-style: none;
@@ -56,15 +87,178 @@ nav {
     text-underline-offset: 0px;
     text-decoration: none;
 }
-.nav-item:hover {
+.nav-item::selection{
     color: red;
+    background-color: white;
+}
+.nav-item:hover {
+    color: var(--red1);
     text-decoration: underline;
     text-decoration-style: dashed;
     text-underline-offset: 2px;
 }
 .nav-item.active {
-    color: red;
+    color: var(--red1);
 }
+#nav-item-perfil {
+    height: 40px;
+    width: 40px;
+    margin: 0 0 0 5px;
+    border-radius: 50%;
+    background-color: white;
+    background-position: center;
+    background-size: cover; 
+}
+#nav-item-perfil:hover {
+    transition: .6s;
+    scale: 1.4;
+}
+/* Fim da nav */
+#banner {
+    height: 40vh;
+    width: 100%;
+    background-image: url('/imgs/bg_03.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.blackFilter {
+    background-color: rgba(32, 32, 32, 0.1);
+    height: 100%;
+    width: 100%;
+}
+/* Our Services */
+#ourServices {
+    width: 100%;
+    background-color: var(--gray);
+}
+#ourServices h2 {
+    padding: 8px;
+    margin: 0;
+    color: white;
+    font-family: var(--font6);
+    text-align: center;
+}
+
+#ourServices .container {
+    max-width: 95%;
+}
+#ourServices .card {
+    height: 200px;
+    margin-bottom: calc(var(--bs-gutter-x) * 1); /* Cálculo retirado diretamente do bootstrap via inspecionar, para igualar o espaçamento inferior ao lateral */
+    background-color: transparent;
+}
+.card-image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-image: url('/imgs/card_img2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card-body{
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    border-radius: 5px;
+}
+.card-body:hover{
+    & .card-image {
+        filter: grayscale();
+        transition: .7s;
+    }
+    & .card-body__content {
+        opacity: 100%;
+        transition: .7s;
+        background-color: rgba(32, 32, 32, 0.5);
+    }
+}
+#ourServices #card-arcondicionado {
+    background-image: url('/imgs/card_img4.jpg');
+}
+#ourServices #card-pneu {
+    background-image: url('/imgs/card_img3.jpg');
+}
+#ourServices #card-mecanica_geral {
+    background-image: url('/imgs/card_img1.jpg');
+}
+#ourServices #card-manutencao-preventiva {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRKQoYyyVL40iTVbAO2gaR0Z2Lbw5odJpsmA&s')
+}
+#ourServices #card-servicos-eletricos {
+    background-image: url('https://oficinasautotech.com.br/site/wp-content/uploads/2019/04/escanear-carro-thegem-blog-default.jpg');
+}
+#ourServices #card-vidro {
+    background-image: url('https://www.veluplast.com.br/wp-content/uploads/2021/08/2021-08-12-cuidados-com-carro-blindado.jpg');
+}
+#ourServices #card-sensores {
+    background-image: url('https://www.canaldapeca.com.br/blog/wp-content/uploads/2019/01/sensor-de-r%C3%A9.jpg');
+}
+
+.card-body__content {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card-body__text {
+    padding: 0 5px;
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.card-button{
+    padding: 5px 10px;
+    border: 1px solid var(--red1);
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--red1);
+}
+.card-button:hover{
+    transition: .7s;
+    box-shadow: 0px 0px 20px var(--red2);
+}
+/* Página Quem somos */
+#quem-somos-container{
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-size: cover;
+    filter: grayscale(0.3);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#quem-somos-container__block-text{
+    width: 80%;
+    min-height: 30vh;
+    padding: 2% 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-align: justify;
+    background-color: white;
+}
+#quem-somos-container__block-text h1 {
+    font-family: var(--font6);
+    text-align: center;
+}
+#text-red {
+    color: red;
+    font-weight: bold;
+}
+/* Footer */
 footer{
     padding: 10px 0;
     margin: 0;
@@ -89,7 +283,8 @@ footer .container .row {
 .footer-icons__div {
     height: 35px;
     width: 35px;
-    border: 2px solid red;
+    min-width: 35px;
+    border: 2px solid var(--red1);
     padding: 0;
     margin: 0;
     border-radius: 50%;
@@ -104,6 +299,7 @@ footer .container .row {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
 }
 footer svg {
     width: 100%;
@@ -115,28 +311,37 @@ footer svg {
     justify-self: center;
     fill: white;
     stroke: white;
+    background-color: transparent;
     stroke-width: 2;
 }
-footer svg:hover {
+footer svg {
     border-radius: 50%;
 }
 #icon-facebook:hover, #icon-facebook:focus {
     border-color: darkblue;
-    background: radial-gradient(blue, darkblue);
     transition: .5s;
+    & svg {
+        background: radial-gradient(blue, darkblue);
+    }
 }
 #icon-whatsapp:hover, #icon-whatsapp:focus {
     border-color: darkgreen;
-    background: radial-gradient(green, darkgreen);
     transition: .5s;
+    & svg {
+        background: radial-gradient(green, darkgreen);
+    }
 }
 #icon-instagram:hover, #icon-instagram:focus {
     border-color: darkorange;
-    background: linear-gradient(to bottom, red, darkorange);
     transition: .5s;
+    & svg {
+        background: linear-gradient(to bottom, var(--red1), darkorange);
+    }
 }
 #icon-linkedin:hover, #icon-linkedin:focus {
     border-color: rgb(7, 131, 172);
-    background: radial-gradient(lightblue, rgb(7, 131, 172));
     transition: .5s;
+    & svg {
+        background: radial-gradient(lightblue, rgb(7, 131, 172));
+    }
 }

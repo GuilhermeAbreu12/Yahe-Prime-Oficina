@@ -1,0 +1,137 @@
+#section-main {
+    display: none;
+}
+#section-login {
+    display: none;
+}
+form {
+    min-width: 250px;
+    width: 60%;
+    padding: 2rem 1.5rem;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 15px;
+    color: black;
+    background-color: rgb(241, 241, 241);
+    backdrop-filter: blur(1.6px);
+}
+form h1{
+    font-size: 2rem;
+    font-family: var(--font2);
+    font-weight: bold;
+}
+
+.input-box{
+    width: 100%;
+    height: 50px;
+    color: #2b9348;
+}
+.input-box input{
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+}
+
+.input-box input::placeholder{
+    color: gray;
+}
+.remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    color: red;
+}
+
+.remember-forgot label input{
+    accent-color: black;
+}
+
+.remember-forgot a{
+    text-decoration: none;
+    color: black;
+}
+#login-buttons {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
+.btn{
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+#no-login:hover{
+    box-shadow: 0 0 20px gray;
+}
+#login{
+    background-color: black;
+    color: white;
+}
+#login:hover{
+    box-shadow: 0 0 20px black;
+    transition: 0.7s;
+}
+.register-link{
+    font-size: 14px;
+    text-align: center;
+    color: black;
+}
+
+.register-link a{
+    text-decoration: none;
+    color: red;
+    font-weight: 600;
+}
+.register-link a:hover{
+    text-decoration: underline;
+}
+.register-link p{
+    margin: 0;
+}
+
+#sucess-mensage {
+    color: rgb(0, 214, 0);
+}
+.cadastro{
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 17px;
+    color: black;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.cadastro:hover{
+    background-color: black;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    color: white;
+    transition: 0.7s;
+}
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-position: center;
+}
